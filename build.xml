@@ -11,14 +11,16 @@
 	<property name="moxie.version" value="0.9.4" />
 	<property name="moxie.url" value="http://gitblit.github.io/moxie/maven" />
 	<property name="moxie.jar" value="moxie-toolkit-${moxie.version}.jar" />
-	<property name="moxie.dir" value="${user.home}/.moxie" />
+	<!-- <property name="moxie.dir" value="${user.home}/.moxie" /> -->
+	<property name="moxie.dir" value="D:/Program-Files/moxie" />
 
 	<property name="jacoco.version" value="0.8.4" />
 
 	<!-- Download Moxie from it's Maven repository to user.home -->
 	<mkdir dir="${moxie.dir}" />
-	<get src="${moxie.url}/com/gitblit/moxie/moxie-toolkit/${moxie.version}/${moxie.jar}"
-		dest="${moxie.dir}" skipexisting="true" verbose="true" />
+	<!-- <get src="${moxie.url}/com/gitblit/moxie/moxie-toolkit/${moxie.version}/${moxie.jar}"
+		dest="${moxie.dir}" skipexisting="true" verbose="true" /> -->
+	<get src="file:${moxie.dir}/${moxie.jar}" dest="${moxie.dir}" skipexisting="true" verbose="true" />
 	
 	<!-- Register Moxie tasks -->
 	<taskdef uri="antlib:org.moxie">

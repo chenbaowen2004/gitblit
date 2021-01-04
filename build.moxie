@@ -101,7 +101,8 @@ registeredRepositories:
 - { id: gitblit, url: 'http://gitblit.github.io/gitblit-maven' }
 
 # Source all dependencies from the following repositories in the specified order
-repositories: central, eclipse-snapshots, eclipse, gitblit
+# repositories: central, eclipse-snapshots, eclipse, gitblit
+repositories: central, eclipse-snapshots, eclipse
 
 # Convenience properties for dependencies
 properties: {
@@ -118,7 +119,7 @@ properties: {
   mina.version: 2.0.21
   guice.version : 4.0
   # Gitblit maintains a fork of guice-servlet
-  guice-servlet.version : 4.0-gb2
+  guice-servlet.version : 4.1.0
   }
 
 # Dependencies
